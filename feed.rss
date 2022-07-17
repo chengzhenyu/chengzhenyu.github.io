@@ -1,26 +1,97 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>科丁格斯的记事本</title><description>程振宇的个人博客,Core Data,Swift,Swift UI,Combine,iOS APP</description><link>https://chengzhenyu.github.io</link><language>zh</language><lastBuildDate>Sat, 16 Jul 2022 23:33:55 +0800</lastBuildDate><pubDate>Sat, 16 Jul 2022 23:33:55 +0800</pubDate><ttl>250</ttl><atom:link href="https://chengzhenyu.github.io/feed.rss" rel="self" type="application/rss+xml"/><item><guid isPermaLink="true">https://chengzhenyu.github.io/posts/first-post</guid><title>重建博客</title><description>我的第一篇文章</description><link>https://chengzhenyu.github.io/posts/first-post</link><pubDate>Sat, 16 Jul 2022 20:34:00 +0800</pubDate><content:encoded><![CDATA[<h1>重建博客</h1><p>用 Publish 创建了一个博客，一边搭建，一边记录。</p><h4><a href="https://github.com/johnsundell/publish">Publish</a></h4><p><code>Welcome to Publish, a static site generator built specifically for Swift developers. It enables entire websites to be built using Swift, and supports themes, plugins and tons of other powerful customization options.</code></p><h4>参考文章 <a href="https://www.fatbobman.com/posts/publish-1/">肘子的Swift记事本</a></h4><p><code>Publish 是一款专门为 Swift 开发者打造的静态网站生成器。它使用 Swift 构建整个网站，并支持主题、插件和其他大量的定制选项。</code></p><h4>用源代码安装Publish</h4><pre><code>$git clone https://github.com/JohnSundell/Publish.git
-$cd Publish
-$make
-</code></pre><h4>创建自己的博客</h4><pre><code>$mkdir ChengzhenyuBlog
-$cd ChengzhenyuBlog 
-$publish new
-</code></pre><h4>编译及运行</h4><pre><code>$publish run
-</code></pre><h4>修改 main.swift</h4><pre><code>var url = URL(string: "https://chengzhenyu.github.io")!
-</code></pre><pre><code>try ChengzhenyuBlog().publish( //.publish(withTheme: .foundation)
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>程序猿的小本儿本儿</title><description>程振宇的个人博客,Swift,Swift UI,Combine,iOS APP,杂事儿</description><link>https://chengzhenyu.github.io</link><language>zh</language><lastBuildDate>Sun, 17 Jul 2022 20:59:36 +0800</lastBuildDate><pubDate>Sun, 17 Jul 2022 20:59:36 +0800</pubDate><ttl>250</ttl><atom:link href="https://chengzhenyu.github.io/feed.rss" rel="self" type="application/rss+xml"/><item><guid isPermaLink="true">https://chengzhenyu.github.io/posts/lonely-warrior</guid><title>大胖仔仔沉迷孤勇者</title><description></description><link>https://chengzhenyu.github.io/posts/lonely-warrior</link><pubDate>Sun, 17 Jul 2022 20:10:00 +0800</pubDate><content:encoded><![CDATA[<blockquote><p>这首歌火到什么程度，我不知道，我只是知道大胖仔仔每天都要听很多很多遍，还跟着一起唱:)</p></blockquote><pre data-language="undefined" class="hljs"><code>
+孤勇者
+
+作词：唐恬
+作曲：钱雷
+演唱：陈奕迅
+
+都 是勇敢的
+你额头的伤口 你的 不同 你犯的错
+都 不必隐藏
+你破旧的玩偶 你的 面具 你的自我
+
+他们说 要带着光 驯服每一头怪兽
+他们说 要缝好你的伤 没有人爱小丑
+为何孤独 不可 光荣
+人只有不完美 值得歌颂
+谁说污泥满身的不算英雄
+
+爱你孤身走暗巷
+爱你不跪的模样
+爱你对峙过绝望
+不肯哭一场
+
+爱你破烂的衣裳
+却敢堵命运的枪
+爱你和我那么像
+缺口都一样
+
+去吗？配吗？这褴褛的披风
+战吗？战啊！以最卑微的梦
+致那黑夜中的呜咽与怒吼
+谁说站在光里的才算英雄
+
+他们说 要戒了你的狂 就像擦掉了污垢
+他们说 要顺台阶而上 而代价是低头
+那就让我 不可 乘风
+你一样骄傲着 那种孤勇
+谁说对弈平凡的不算英雄
+
+爱你孤身走暗巷
+爱你不跪的模样
+爱你对峙过绝望
+不肯哭一场
+
+爱你破烂的衣裳
+却敢堵命运的枪
+爱你和我那么像
+缺口都一样
+
+去吗？配吗？这褴褛的披风
+战吗？战啊！以最卑微的梦
+致那黑夜中的呜咽与怒吼
+谁说站在光里的才算英雄
+
+你的斑驳 与众不同
+你的沉默 震耳欲聋
+
+爱你孤身走暗巷
+爱你不跪的模样
+爱你对峙过绝望
+不肯哭一场
+
+爱你来自于蛮荒
+一生不借谁的光
+你将造你的城邦
+在废墟之上
+
+去吗？去啊！以最卑微的梦
+战吗？战啊！以最孤高的梦
+致那黑夜中的呜咽与怒吼
+谁说站在光里的才算英雄
+</code></pre>]]></content:encoded></item><item><guid isPermaLink="true">https://chengzhenyu.github.io/posts/second-day</guid><title>继续装修博客</title><description></description><link>https://chengzhenyu.github.io/posts/second-day</link><pubDate>Sun, 17 Jul 2022 17:15:00 +0800</pubDate><content:encoded><![CDATA[<blockquote><p>参考肘子的文章和开源代码继续装修博客</p></blockquote><p>差不多就是现在看到的这个样子咯～</p><h3>TODO:</h3><p>补课CSS，多年前看过的相关文档已经归零，从头再来@,.@ 好在不用看javascript咯～</p>]]></content:encoded></item><item><guid isPermaLink="true">https://chengzhenyu.github.io/posts/first-post</guid><title>时隔多年重新创建博客</title><description></description><link>https://chengzhenyu.github.io/posts/first-post</link><pubDate>Sat, 16 Jul 2022 20:34:00 +0800</pubDate><content:encoded><![CDATA[<blockquote><p>用Publish重新创建了博客，一边搭建，一边记录。</p></blockquote><h2>搭建与发布</h2><ul><li>用源代码安装Publish</li></ul><pre data-language="sh" class="hljs"><code><span class="hljs-variable">$git</span> <span class="hljs-built_in">clone</span> https://github.com/JohnSundell/Publish.git
+<span class="hljs-variable">$cd</span> Publish
+<span class="hljs-variable">$make</span>
+</code></pre><ul><li>创建自己的博客</li></ul><pre data-language="sh" class="hljs"><code><span class="hljs-variable">$mkdir</span> ChengzhenyuBlog
+<span class="hljs-variable">$cd</span> ChengzhenyuBlog 
+<span class="hljs-variable">$publish</span> new
+</code></pre><ul><li>编译及运行</li></ul><pre data-language="sh" class="hljs"><code><span class="hljs-variable">$publish</span> run
+</code></pre><ul><li>修改main.swift</li></ul><pre data-language="swift" class="hljs"><code><span class="hljs-keyword">var</span> url = <span class="hljs-type">URL</span>(string: <span class="hljs-string">"https://chengzhenyu.github.io"</span>)!
+</code></pre><pre data-language="swift" class="hljs"><code><span class="hljs-keyword">try</span> <span class="hljs-type">ChengzhenyuBlog</span>().publish( <span class="hljs-comment">//.publish(withTheme: .foundation)</span>
     using: [
         .copyResources(),
         .addMarkdownFiles(),
         .generateHTML(withTheme: .foundation),
         .generateRSSFeed(including: [.posts]),
         .generateSiteMap(),
-        .unwrap(.gitHub("chengzhenyu/chengzhenyu.github.io", useSSH: false), PublishingStep.deploy)
+        .unwrap(.gitHub(<span class="hljs-string">"chengzhenyu/chengzhenyu.github.io"</span>, useSSH: <span class="hljs-literal">false</span>), <span class="hljs-type">PublishingStep</span>.deploy)
         
     ]
 )
-</code></pre><h1>解决发布到 github 时遇到的问题</h1><h3>问题</h3><p>写好了 PublishingStep.deploy，执行 publish deploy，无法发布到 github。没反应！修改 ssh 参数后，提示输入 username，回车仍然没有反应。</p><h3>解决方法：添加 ssh key</h3><pre><code>$git config --global user.name “yourname”
-$git config --global user.email“your@email.com"
-$ssh -keygen -t rsa -C "your@email.com"
-</code></pre><p>一路 yes 和回车 在 .ssh 文件夹下生成两个文件，id<em>rsa 和 id</em>rsa.pub，打开 id_rsa.pub，将全部的内容复制，登录 github 添加 ssh key</p><pre><code>ssh -T git@github.com
-</code></pre><p>输入 yes，回车。</p><h1>xcode 设置成 run &amp; deploy</h1><p>点击 Edit Scheme，在 Aguments 中添加 --deploy</p><h1>记录一下这个博客的初始样子：P</h1><p>
-<img src="https://chengzhenyu.github.io/images/screenshot-blog-initialversion.png" width="50%">
-</p><p>下面这种 markdown 写法不支持设置大小？！</p><p><code>![baby](/images/screenshot-blog-initialversion.png)</code></p><h1>最后</h1><p>第一天，我去河边去打水，丢了我的鞋，我...开始玩 Publish... 今天是2022年7月16日，这个博客出生了：）</p>]]></content:encoded></item></channel></rss>
+</code></pre><h2>解决发布到github时遇到的问题</h2><ul><li>问题：写好了PublishingStep.deploy，执行publish deploy，无法发布到github。没反应！修改ssh 参数后，提示输入username，回车仍然没有反应。</li><li>解决方法：添加ssh key</li></ul><pre data-language="sh" class="hljs"><code><span class="hljs-variable">$git</span> config --global user.name “yourname”
+<span class="hljs-variable">$git</span> config --global user.email“your@email.com<span class="hljs-string">"
+<span class="hljs-variable">$ssh</span> -keygen -t rsa -C "</span>your@email.com<span class="hljs-string">"</span>
+</code></pre><p>一路yes和回车。在.ssh文件夹下生成两个文件，id<em>rsa和id</em>rsa.pub，打开id_rsa.pub，将全部的内容复制，登录github添加ssh key</p><pre data-language="sh" class="hljs"><code>ssh -T git@github.com
+</code></pre><p>输入yes，回车。</p><h2>xcode设置成run&amp;deploy</h2><p>点击Edit Scheme，在Aguments中添加--deploy</p><h2>博客的初始样子：P</h2><p>
+<img src="https://chengzhenyu.github.io/images/screenshot-blog-initialversion.png" width="80%">
+</p><p>下面这种markdown写法不支持设置图片大小？！</p><p><code>![baby](/images/screenshot-blog-initialversion.png)</code></p><h2>最后</h2><p>第一天，我去河边去打水，丢了我的鞋，我...开始玩Publish...</p><p>今天是2022年7月16日，这个博客出生了：）</p><h2>参考资料</h2><ul><li><a href="https://github.com/johnsundell/publish">Publish</a></li></ul><p>Welcome to Publish, a static site generator built specifically for Swift developers. It enables entire websites to be built using Swift, and supports themes, plugins and tons of other powerful customization options.</p><ul><li><a href="https://www.fatbobman.com/posts/publish-1/">肘子的Swift记事本</a></li></ul><p>Publish是一款专门为Swift开发者打造的静态网站生成器。它使用Swift构建整个网站，并支持主题、插件和其他大量的定制选项。</p><ul><li><a href="https://siddarthkalra.github.io/articles/2020-12-20-migrated-to-publish/">Migrated to Publish</a></li></ul><p>Today, I'm so glad to share that this website has been migrated to Publish, a static site generator by John Sundell written in Swift! 🎉</p><ul><li><a href="https://www.createwithswift.com/using-github-actions-to-deploy-static-sites-generated-with-swift-and-publish/">Using GitHub Actions to deploy Static Sites generated with Swift and Publish</a></li></ul><p>By the end of this tutorial, you will be able to use Github Actions to build and deploy a static website generated with Swift on Github Pages.</p><ul><li><a href="https://cloud.tencent.com/developer/article/1572090">git出错：“Please make sure you have the correct access rights and the repository exists.</a></li><li><a href="https://chenzhijin.com/en/article/Gallery%20Plugin%20for%20Publish/">PublishGallery Plugin for Publish</a></li><li><a href="https://dev.to/sowenjub/deploy-your-publish-website-for-free-on-github-pages-1nhn">Deploy your Publish website for free on GitHub Pages</a></li><li><a href="https://www.createwithswift.com/deploying-static-sites-generated-with-swift-and-publish-with-gitlab-ci-cd/">Deploying Static Sites generated with Swift and Publish with Gitlab CI/CD</a></li><li><a href="https://cloud.tencent.com/developer/ask/sof/998714/answer/1411722">如何将发布站点部署到GitHub页面</a></li></ul>]]></content:encoded></item></channel></rss>
