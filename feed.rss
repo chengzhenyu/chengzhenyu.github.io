@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>程序猿的小本儿本儿</title><description>程振宇的个人博客,Swift,Swift UI,Combine,iOS APP,杂事儿</description><link>https://chengzhenyu.github.io</link><language>zh</language><lastBuildDate>Fri, 5 Aug 2022 05:17:43 +0800</lastBuildDate><pubDate>Fri, 5 Aug 2022 05:17:43 +0800</pubDate><ttl>250</ttl><atom:link href="https://chengzhenyu.github.io/feed.rss" rel="self" type="application/rss+xml"/><item><guid isPermaLink="true">https://chengzhenyu.github.io/posts/brandnew-month</guid><title>优化笔记系统</title><description></description><link>https://chengzhenyu.github.io/posts/brandnew-month</link><pubDate>Mon, 1 Aug 2022 05:31:00 +0800</pubDate><content:encoded><![CDATA[<p>
+<img src="https://chengzhenyu.github.io/images/notesystem2022080501.jpg" width="100%">
+</p><blockquote><p>20220803 UPDATED：简化。 20220805 UPDATED：极简：-金属活页环，-TN皮。</p></blockquote><h2>笔记的三种形态</h2><ul><li>Joplin</li></ul><ul><li>.com</li></ul><ul><li>A5slim（210x110，A4纸，其他）</li></ul><pre data-language="shell" class="hljs"><code>A4三栏设置基本数据：
+页面方向：横向
+页边空白：内部1.5cm，外侧0.5cm，勾选对开页（可使双面打印前后对齐）
+三栏等宽：栏8.57cm，间距1cm
+字号：10
+行距：1
+</code></pre><h2>开发小记</h2><ul><li>publish run报错<ul><li>升级到macos ventura Beta4以后，终端执行<code>publish run</code>报“segmentation fault”错误。</li><li>删除依赖package、build等文件后，重新run，正常。</li><li>原因：不查了，懒@,.@</li></ul></li></ul><blockquote><p>以下内容作废</p></blockquote><h2>原电子笔记不变</h2><ul><li>Joplin<ul><li>随时记录</li><li>CP大法</li><li>按需转至.com和A4</li></ul></li></ul><ul><li>.com</li></ul><h2>一元化笔记系统升级</h2><p><s><code>A4三折 -&gt; A5SLIM -&gt; TN标准</code></s></p><p><code>A4三折 -&gt; A5SLIM</code></p><ul><li>A4纸<ul><li>A4纸是最好的笔记初始形态。</li><li>纸张类型<ul><li>白纸</li><li>道林纸（米黄） new！</li><li>方格纸</li></ul></li><li>折叠法<ul><li>三折法（<s>最常用，可</s>直接放入A5SLIM）</li><li><s>四折法</s></li><li><s>其他</s></li></ul></li></ul></li></ul><ul><li>A5SLIM<ul><li><s>空白凭证纸210x110</s></li><li>A4纸三折法</li><li>其他</li></ul></li></ul><ul><li><s>TN标准（随身携带）</s><ul><li><s>自带小本</s></li><li><s>锦宫a5handy</s><s>自制A5SLIM活页本（A5SLIM + A4三折法）直接放入</s></li></ul></li></ul><p>
+<img src="https://chengzhenyu.github.io/images/notesystem20220801.jpg" width="100%">
+</p><p>
+<img src="https://chengzhenyu.github.io/images/notesystem2022080301.jpg" width="100%">
+</p><p>
+<img src="https://chengzhenyu.github.io/images/notesystem2022080302.jpg" width="100%">
+</p>]]></content:encoded></item><item><guid isPermaLink="true">https://chengzhenyu.github.io/posts/README</guid><title>二十年多前，勤奋地练习篮球技术</title><description></description><link>https://chengzhenyu.github.io/posts/README</link><pubDate>Wed, 27 Jul 2022 17:00:00 +0800</pubDate><content:encoded><![CDATA[<p>
+<img src="https://chengzhenyu.github.io/images/basketballskill.jpg" width="100%">
+</p>]]></content:encoded></item><item><guid isPermaLink="true">https://chengzhenyu.github.io/posts/laowujian</guid><title>老物件</title><description></description><link>https://chengzhenyu.github.io/posts/laowujian</link><pubDate>Wed, 27 Jul 2022 16:00:00 +0800</pubDate><content:encoded><![CDATA[<p>
+<img src="https://chengzhenyu.github.io/images/panfront.jpg" width="100%">
+</p><p>
+<img src="https://chengzhenyu.github.io/images/panback.jpg" width="100%">
+</p>]]></content:encoded></item><item><guid isPermaLink="true">https://chengzhenyu.github.io/posts/chahua-20220721</guid><title>画画画01</title><description></description><link>https://chengzhenyu.github.io/posts/chahua-20220721</link><pubDate>Thu, 21 Jul 2022 22:48:00 +0800</pubDate><content:encoded><![CDATA[<blockquote><p>别的不重要，就是画画画。</p></blockquote><p>
+<img src="https://chengzhenyu.github.io/images/drawing20220721001.jpg" width="100%">
+</p><h2>读《小熊老师零基础神奇绘画课》</h2><ul><li>小熊老师说：<ul><li>用笔不改、不填、不虚、不画阴影、不填黑色。</li><li>先画前面部分，再画后面部分，画的过程中尽量注意局部，画到哪里看哪里，不要老是去顾及整体像不像，像不像不重要。</li><li>注意封口。初学者行笔过程要慢，特别在拐弯和接口的地方，就像开车转弯要减速一样。封口的好处一是提醒大家线要画实在，二是为了下一步电脑上色时颜色不会漏掉。</li><li>用线不能过密，0-6即可，7-11不要用。</li><li>画面四个角的空间要有大小的变化，四条边也要有疏密变化，构图就是解决四个角四条边的变化问题。</li><li>配色的规则是选择“朋友”找协调，选择“敌人”找对比，选择“暧昧”找平衡。</li><li>不会画的就先空着，比如人的五官，比如手。但是，如果你不去纠结像不像的问题，随时都可以画任何东西。</li></ul></li></ul><ul><li>临摹画<ul><li>比如芥子园中的画</li></ul></li></ul><ul><li>对着实物写生<ul><li>观察不好就拍照片看看</li></ul></li></ul><blockquote><p>如果有人评论你的画...</p></blockquote><h2>对专家</h2><ul><li>说“谢谢”。</li></ul><h2>对商家</h2><ul><li>:)</li></ul><h2>对键盘侠</h2><ul><li></li></ul>]]></content:encoded></item><item><guid isPermaLink="true">https://chengzhenyu.github.io/posts/modifier-music-player</guid><title>实现播放音乐</title><description></description><link>https://chengzhenyu.github.io/posts/modifier-music-player</link><pubDate>Wed, 20 Jul 2022 01:00:00 +0800</pubDate><content:encoded><![CDATA[<blockquote><p>用网易云音乐播放markdown格式信息给出的歌曲。</p></blockquote><h2>实现</h2><pre data-language="swift" class="hljs"><code><span class="hljs-keyword">import</span> Foundation
+<span class="hljs-keyword">import</span> Ink
+<span class="hljs-keyword">import</span> Sweep
+
+<span class="hljs-keyword">var</span> musicPlayer = <span class="hljs-type">Modifier</span>(target: .codeBlocks) { html, markdown <span class="hljs-keyword">in</span>
+    <span class="hljs-keyword">guard</span> <span class="hljs-keyword">let</span> content = markdown.substrings(between: <span class="hljs-string">"```musicPlayer\n"</span>, and: <span class="hljs-string">"\n```"</span>).first <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">return</span> html
+    }
+    
+    <span class="hljs-keyword">var</span> musicID: <span class="hljs-type">String</span> = <span class="hljs-string">""</span>
+    <span class="hljs-keyword">var</span> auto: <span class="hljs-type">String</span> = <span class="hljs-string">""</span>
+    
+    content.scan(using: [
+        <span class="hljs-type">Matcher</span>(identifier: <span class="hljs-string">"musicID: "</span>, terminator: <span class="hljs-string">"\n"</span>, allowMultipleMatches: <span class="hljs-literal">false</span>) { match, <span class="hljs-number">_</span> <span class="hljs-keyword">in</span>
+            musicID = <span class="hljs-type">String</span>(match)
+        },
+        <span class="hljs-type">Matcher</span>(identifier: <span class="hljs-string">"auto: "</span>, terminator: <span class="hljs-string">"\n"</span>, allowMultipleMatches: <span class="hljs-literal">false</span>) { match, <span class="hljs-number">_</span> <span class="hljs-keyword">in</span>
+            auto = <span class="hljs-type">String</span>(match)
+        },
+    ])
+    
+    <span class="hljs-keyword">return</span>
+        <span class="hljs-string">"""
+        &lt;iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="http://music.163.com/outchain/player?type=2&amp;id=\(musicID)&amp;auto=\(auto)&amp;height=66"&gt;&lt;/iframe&gt;
+        """</span>
+}
+</code></pre><h2>调用</h2><pre data-language="swift" class="hljs"><code><span class="hljs-keyword">try</span> <span class="hljs-type">ChengzhenyuBlog</span>().publish(
+    using: [
+        <span class="hljs-comment">// ...</span>
+        .addModifier(modifier: musicPlayer,modifierName:<span class="hljs-string">"music player"</span>),
+        <span class="hljs-comment">// ...</span>
+    ]
+</code></pre>]]></content:encoded></item><item><guid isPermaLink="true">https://chengzhenyu.github.io/posts/plugin-gencname</guid><title>编写生成CNAME的插件</title><description></description><link>https://chengzhenyu.github.io/posts/plugin-gencname</link><pubDate>Tue, 19 Jul 2022 23:40:00 +0800</pubDate><content:encoded><![CDATA[<blockquote><p>写了个插件（plugin），在Publish编译并发布站点到github时，自动产生自定义的域名文件（CNAME），放在output目录下。</p></blockquote><h2>实现</h2><pre data-language="swift" class="hljs"><code><span class="hljs-keyword">import</span> Foundation
+<span class="hljs-keyword">import</span> Publish
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">extension</span> <span class="hljs-title">Plugin</span> </span>{
+    <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">genCNAME</span><span class="hljs-params">(with name: String)</span></span> -&gt; <span class="hljs-type">Self</span> {
+        <span class="hljs-type">Plugin</span>(name: <span class="hljs-string">"GenerateCNAME"</span>) { context <span class="hljs-keyword">in</span>
+            <span class="hljs-keyword">if</span> !name.isEmpty {
+                <span class="hljs-keyword">try</span> context.createOutputFile(at: <span class="hljs-string">"CNAME"</span>).write(<span class="hljs-string">"\(name)\n"</span>)
+            }
+        }
+    }
+}
+</code></pre><h2>调用</h2><pre data-language="swift" class="hljs"><code><span class="hljs-keyword">try</span> <span class="hljs-type">ChengzhenyuBlog</span>().publish(
+    using: [
+        <span class="hljs-comment">// ...</span>
+        .installPlugin(.genCNAME(with: <span class="hljs-string">"chengzhenyu.com"</span>)),
+        .unwrap(.gitHub(<span class="hljs-string">"chengzhenyu/chengzhenyu.github.io"</span>), <span class="hljs-type">PublishingStep</span>.deploy)
+    ]
+)
+</code></pre>]]></content:encoded></item><item><guid isPermaLink="true">https://chengzhenyu.github.io/posts/chahua</guid><title>学习插画</title><description></description><link>https://chengzhenyu.github.io/posts/chahua</link><pubDate>Tue, 19 Jul 2022 18:26:00 +0800</pubDate><content:encoded><![CDATA[<blockquote><p>插画狮时不时地会拿自己的画作问一些诸如“怎么样”、“哪种好”之类的问题，而我的应对之策就是摆出一脸严肃认真的表情，看着图，若有所思（其实心里想的是今晚是炖鲫鱼汤呢还是汆白肉呢），些许时间后点点头，一脸真诚地说“哇，好厉害”，或者以非常肯定的语气说“第一种”（通常第一种是她已经认可的方案）。当专业人士向非专业人士寻求建议时，通常目的并不是真的需要获得帮助，而仅仅是因为要得瑟显摆一下，那种情形下观众仅仅需要点个赞，或者专业人士自己已经做了决定，但是需要经过自己以外的任何人确定一下，而那时旁人的作用仅仅是压垮骆驼背的最后一根稻草而已，不重要，但是需要。稻草也需要学习怎么压一下骆驼背，构图、透视、色彩......</p></blockquote><p>
+<img src="https://chengzhenyu.github.io/images/screenshot-study-illustration-2022-07-19.png" width="100%">
+</p><blockquote><p>以下，为胡思乱想。</p></blockquote><h2>关于学习插画</h2><ul><li>不要试图画得像，更不要试图画得准，而应该参考图或照片或实物，画出自己想画，现阶段能画的图。</li><li>绘画，是一个建模的过程，从脑海中提取，按分类提取，构建模型，组合模型。</li><li>不要试图追求完美准确的透视，现在做不到的。</li><li>不要学习单一事物的画法，比如：云、头发、小狗、手、眼睛、褶皱、火、草...</li></ul><h2>插画元素</h2><ul><li>线1（与两侧的面的颜色不一样，只要与某个面的颜色一样，就是面的一部分了）：作为边界</li><li>线2（有丰富的长度、宽度变化，本质上是面）：表现纹理质感</li><li>面1（单一色彩）：形成区域（影子也是区域哦）和边界</li><li>面2（色彩有一定变化）：形成空间感和边界</li><li>块（由多个面组合而成）：形成空间感</li></ul><h2>练习方法</h2><ul><li>Step1：练习画“线1”，就是线稿</li><li>Step2：练习画“线2”</li><li>Step3：练习画“面1”，多个“面1”组合而成“块”</li><li>Step4：练习画“面2”，在这之前，不用管单个面上的色彩变化</li><li>Step5：到这一步了，应该已经积累了许多经验，可以把透视、构图、色彩等加进来思考，创作。<ul></ul></li></ul><blockquote><p>画点儿什么好呢？</p></blockquote><h2>插画风格</h2><ul><li>手绘风格（厚涂、半厚涂、赛璐璐）</li><li>Erics风格（大色块、简约）</li><li>MBE风格（描边、扁平）</li><li>涂鸦风格</li><li>......</li></ul>]]></content:encoded></item><item><guid isPermaLink="true">https://chengzhenyu.github.io/posts/lonely-warrior</guid><title>大胖仔仔沉迷孤勇者</title><description></description><link>https://chengzhenyu.github.io/posts/lonely-warrior</link><pubDate>Sun, 17 Jul 2022 20:10:00 +0800</pubDate><content:encoded><![CDATA[<blockquote><p>这首歌火到什么程度，我不知道，我只是知道大胖仔仔每天都要听很多很多遍，还跟着一起唱:)</p></blockquote><div style="position: relative; padding: 30% 45% ; margin-top:20px;margin-bottom:20px">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=764108122&page=1&as_wide=1&high_quality=1&danmaku=0" frameborder="no" scrolling="no"></iframe>
+</div><pre data-language="undefined" class="hljs"><code>
+孤勇者
+
+作词：唐恬
+作曲：钱雷
+演唱：陈奕迅
+
+都 是勇敢的
+你额头的伤口 你的 不同 你犯的错
+都 不必隐藏
+你破旧的玩偶 你的 面具 你的自我
+
+他们说 要带着光 驯服每一头怪兽
+他们说 要缝好你的伤 没有人爱小丑
+为何孤独 不可 光荣
+人只有不完美 值得歌颂
+谁说污泥满身的不算英雄
+
+爱你孤身走暗巷
+爱你不跪的模样
+爱你对峙过绝望
+不肯哭一场
+
+爱你破烂的衣裳
+却敢堵命运的枪
+爱你和我那么像
+缺口都一样
+
+去吗？配吗？这褴褛的披风
+战吗？战啊！以最卑微的梦
+致那黑夜中的呜咽与怒吼
+谁说站在光里的才算英雄
+
+他们说 要戒了你的狂 就像擦掉了污垢
+他们说 要顺台阶而上 而代价是低头
+那就让我 不可 乘风
+你一样骄傲着 那种孤勇
+谁说对弈平凡的不算英雄
+
+爱你孤身走暗巷
+爱你不跪的模样
+爱你对峙过绝望
+不肯哭一场
+
+爱你破烂的衣裳
+却敢堵命运的枪
+爱你和我那么像
+缺口都一样
+
+去吗？配吗？这褴褛的披风
+战吗？战啊！以最卑微的梦
+致那黑夜中的呜咽与怒吼
+谁说站在光里的才算英雄
+
+你的斑驳 与众不同
+你的沉默 震耳欲聋
+
+爱你孤身走暗巷
+爱你不跪的模样
+爱你对峙过绝望
+不肯哭一场
+
+爱你来自于蛮荒
+一生不借谁的光
+你将造你的城邦
+在废墟之上
+
+去吗？去啊！以最卑微的梦
+战吗？战啊！以最孤高的梦
+致那黑夜中的呜咽与怒吼
+谁说站在光里的才算英雄
+</code></pre>]]></content:encoded></item><item><guid isPermaLink="true">https://chengzhenyu.github.io/posts/second-day</guid><title>继续装修博客</title><description></description><link>https://chengzhenyu.github.io/posts/second-day</link><pubDate>Sun, 17 Jul 2022 17:15:00 +0800</pubDate><content:encoded><![CDATA[<blockquote><p>参考肘子的文章和开源代码继续装修博客</p></blockquote><p>差不多就是现在看到的这个样子咯～</p><h3>TODO:</h3><p>补课CSS，多年前看过的相关文档已经归零，从头再来@,.@ 好在不用看javascript咯～</p>]]></content:encoded></item><item><guid isPermaLink="true">https://chengzhenyu.github.io/posts/first-post</guid><title>时隔多年重新创建博客</title><description></description><link>https://chengzhenyu.github.io/posts/first-post</link><pubDate>Sat, 16 Jul 2022 20:34:00 +0800</pubDate><content:encoded><![CDATA[<blockquote><p>用Publish重新创建了博客，一边搭建，一边记录。</p></blockquote><h2>搭建与发布</h2><ul><li>用源代码安装Publish</li></ul><pre data-language="sh" class="hljs"><code><span class="hljs-variable">$git</span> <span class="hljs-built_in">clone</span> https://github.com/JohnSundell/Publish.git
+<span class="hljs-variable">$cd</span> Publish
+<span class="hljs-variable">$make</span>
+</code></pre><ul><li>创建自己的博客</li></ul><pre data-language="sh" class="hljs"><code><span class="hljs-variable">$mkdir</span> ChengzhenyuBlog
+<span class="hljs-variable">$cd</span> ChengzhenyuBlog 
+<span class="hljs-variable">$publish</span> new
+</code></pre><ul><li>编译及运行</li></ul><pre data-language="sh" class="hljs"><code><span class="hljs-variable">$publish</span> run
+</code></pre><ul><li>修改main.swift</li></ul><pre data-language="swift" class="hljs"><code><span class="hljs-keyword">var</span> url = <span class="hljs-type">URL</span>(string: <span class="hljs-string">"https://chengzhenyu.github.io"</span>)!
+</code></pre><pre data-language="swift" class="hljs"><code><span class="hljs-keyword">try</span> <span class="hljs-type">ChengzhenyuBlog</span>().publish( <span class="hljs-comment">//.publish(withTheme: .foundation)</span>
+    using: [
+        .copyResources(),
+        .addMarkdownFiles(),
+        .generateHTML(withTheme: .foundation),
+        .generateRSSFeed(including: [.posts]),
+        .generateSiteMap(),
+        .unwrap(.gitHub(<span class="hljs-string">"chengzhenyu/chengzhenyu.github.io"</span>, useSSH: <span class="hljs-literal">false</span>), <span class="hljs-type">PublishingStep</span>.deploy)
+        
+    ]
+)
+</code></pre><h2>解决发布到github时遇到的问题</h2><ul><li>问题：写好了PublishingStep.deploy，执行publish deploy，无法发布到github。没反应！修改ssh 参数后，提示输入username，回车仍然没有反应。</li><li>解决方法：添加ssh key</li></ul><pre data-language="sh" class="hljs"><code><span class="hljs-variable">$git</span> config --global user.name “yourname”
+<span class="hljs-variable">$git</span> config --global user.email“your@email.com<span class="hljs-string">"
+<span class="hljs-variable">$ssh</span> -keygen -t rsa -C "</span>your@email.com<span class="hljs-string">"</span>
+</code></pre><p>一路yes和回车。在.ssh文件夹下生成两个文件，id<em>rsa和id</em>rsa.pub，打开id_rsa.pub，将全部的内容复制，登录github添加ssh key</p><pre data-language="sh" class="hljs"><code>ssh -T git@github.com
+</code></pre><p>输入yes，回车。</p><h2>xcode设置成run&amp;deploy</h2><p>点击Edit Scheme，在Aguments中添加--deploy</p><h2>博客的初始样子：P</h2><p>
+<img src="https://chengzhenyu.github.io/images/screenshot-blog-initialversion.png" width="80%">
+</p><p>下面这种markdown写法不支持设置图片大小？！</p><p><code>![baby](/images/screenshot-blog-initialversion.png)</code></p><h2>最后</h2><p>第一天，我去河边去打水，丢了我的鞋，我...开始玩Publish...</p><p>今天是2022年7月16日，这个博客出生了：）</p><h2>参考资料</h2><ul><li><a href="https://github.com/johnsundell/publish">Publish</a></li></ul><p>Welcome to Publish, a static site generator built specifically for Swift developers. It enables entire websites to be built using Swift, and supports themes, plugins and tons of other powerful customization options.</p><ul><li><a href="https://www.fatbobman.com/posts/publish-1/">肘子的Swift记事本</a></li></ul><p>Publish是一款专门为Swift开发者打造的静态网站生成器。它使用Swift构建整个网站，并支持主题、插件和其他大量的定制选项。</p><ul><li><a href="https://siddarthkalra.github.io/articles/2020-12-20-migrated-to-publish/">Migrated to Publish</a></li></ul><p>Today, I'm so glad to share that this website has been migrated to Publish, a static site generator by John Sundell written in Swift! 🎉</p><ul><li><a href="https://www.createwithswift.com/using-github-actions-to-deploy-static-sites-generated-with-swift-and-publish/">Using GitHub Actions to deploy Static Sites generated with Swift and Publish</a></li></ul><p>By the end of this tutorial, you will be able to use Github Actions to build and deploy a static website generated with Swift on Github Pages.</p><ul><li><a href="https://cloud.tencent.com/developer/article/1572090">git出错：“Please make sure you have the correct access rights and the repository exists.</a></li><li><a href="https://chenzhijin.com/en/article/Gallery%20Plugin%20for%20Publish/">PublishGallery Plugin for Publish</a></li><li><a href="https://dev.to/sowenjub/deploy-your-publish-website-for-free-on-github-pages-1nhn">Deploy your Publish website for free on GitHub Pages</a></li><li><a href="https://www.createwithswift.com/deploying-static-sites-generated-with-swift-and-publish-with-gitlab-ci-cd/">Deploying Static Sites generated with Swift and Publish with Gitlab CI/CD</a></li><li><a href="https://cloud.tencent.com/developer/ask/sof/998714/answer/1411722">如何将发布站点部署到GitHub页面</a></li></ul>]]></content:encoded></item></channel></rss>
