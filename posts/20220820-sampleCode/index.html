@@ -1,0 +1,316 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"/><meta name="og:site_name" content="程序猿的小本儿本儿"/><link rel="canonical" href="https://chengzhenyu.github.io/posts/20220820-sampleCode"/><meta name="twitter:url" content="https://chengzhenyu.github.io/posts/20220820-sampleCode"/><meta name="og:url" content="https://chengzhenyu.github.io/posts/20220820-sampleCode"/><title>Sample Code | 程序猿的小本儿本儿</title><meta name="twitter:title" content="Sample Code | 程序猿的小本儿本儿"/><meta name="og:title" content="Sample Code | 程序猿的小本儿本儿"/><meta name="description" content="程振宇的个人博客,Swift,Swift UI,Combine,iOS APP,杂事儿"/><meta name="twitter:description" content="程振宇的个人博客,Swift,Swift UI,Combine,iOS APP,杂事儿"/><meta name="og:description" content="程振宇的个人博客,Swift,Swift UI,Combine,iOS APP,杂事儿"/><meta name="twitter:card" content="summary"/><link rel="stylesheet" href="/styles.css" type="text/css"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="shortcut icon" href="/images/favicon.png" type="image/png"/><link rel="alternate" href="/feed.rss" type="application/rss+xml" title="Subscribe to 程序猿的小本儿本儿"/><meta name="twitter:image" content="https://chengzhenyu.github.io/images"/><meta name="og:image" content="https://chengzhenyu.github.io/images"/></head><body class="item-page"><header><div class="wrapper"><div class="logo"><a href="/"><h2></h2></a></div><nav><ul><li><a href="/">首页</a></li><li><a class="selected" href="/posts">文章</a></li><li><a href="/project">我的APP</a></li><li><a href="/tags">标签</a></li><li><a href="/about">关于</a></li></ul></nav></div></header><div class="wrapper"><article><div><h1>Sample Code</h1></div><div><ul class="tag-list"><li class="tag variant-6"><a href="/tags/swift">Swift</a></li><li class="tag variant-7"><a href="/tags/swiftui">SwiftUI</a></li><li class="tag tagdate">2022-08-20</li></ul><div class="content"><h2>$visibility.animation(.linear(duration: 5))</h2><pre data-language="swift" class="hljs"><code><span class="hljs-type">Toggle</span>(isOn: $visibility.animation(.linear(duration: <span class="hljs-number">5</span>))) {
+    <span class="hljs-type">Text</span>(<span class="hljs-string">"Toggle Text Views"</span>)
+}
+</code></pre><h2>.gesture(nil)</h2><pre data-language="swift" class="hljs"><code><span class="hljs-comment">// A gesture recognizer can be removed from a view by passing a nil value to the gesture() modifier</span>
+<span class="hljs-comment">// 吃掉手势事件的方法</span>
+.gesture(<span class="hljs-literal">nil</span>)
+</code></pre><h2>refreshable</h2><pre data-language="swift" class="hljs"><code><span class="hljs-type">ScrollView</span> {
+    <span class="hljs-type">Text</span>(<span class="hljs-string">"hello world."</span>)
+}
+.refreshable {
+    
+}
+</code></pre><h2>.push(from: .trailing)</h2><pre data-language="swift" class="hljs"><code><span class="hljs-type">Text</span>(<span class="hljs-string">"hello world."</span>)
+    .transition(.push(from: .trailing))
+</code></pre><h2>AnyLayout</h2><pre data-language="swift" class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ContentView</span>: <span class="hljs-title">View</span> </span>{
+    @<span class="hljs-type">State</span> <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> show: <span class="hljs-type">Bool</span> = <span class="hljs-literal">false</span>
+    <span class="hljs-keyword">var</span> body: some <span class="hljs-type">View</span> {
+        <span class="hljs-type">ZStack</span> {
+            <span class="hljs-keyword">let</span> dynamicLayout = show ? <span class="hljs-type">AnyLayout</span>(<span class="hljs-type">VStackLayout</span>()) : <span class="hljs-type">AnyLayout</span>(<span class="hljs-type">HStackLayout</span>())
+            dynamicLayout {
+                <span class="hljs-type">Text</span>(<span class="hljs-string">"hello"</span>)
+                <span class="hljs-type">Text</span>(<span class="hljs-string">"world"</span>)
+            }
+            .onTapGesture {
+                withAnimation(.easeInOut(duration: <span class="hljs-number">1</span>)) {
+                    show.toggle()
+                }
+            }
+        }
+    }
+}
+</code></pre><pre data-language="swift" class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ContentView</span>: <span class="hljs-title">View</span> </span>{ <span class="hljs-comment">//AnyLayout 另一个例子（官方）</span>
+    @<span class="hljs-type">Environment</span>(\.dynamicTypeSize) <span class="hljs-keyword">var</span> dynamicTypeSize
+    
+    <span class="hljs-keyword">var</span> body: some <span class="hljs-type">View</span> {
+        <span class="hljs-keyword">let</span> layout = dynamicTypeSize &lt;= .medium ?
+        <span class="hljs-type">AnyLayout</span>(<span class="hljs-type">HStack</span>()) : <span class="hljs-type">AnyLayout</span>(<span class="hljs-type">VStack</span>())
+        
+        layout {
+            <span class="hljs-type">Text</span>(<span class="hljs-string">"First label"</span>)
+            <span class="hljs-type">Text</span>(<span class="hljs-string">"Second label"</span>)
+        }
+    }
+}
+</code></pre><h2>.contentTransition(.interpolate)</h2><pre data-language="swift" class="hljs"><code><span class="hljs-type">Text</span>(<span class="hljs-string">"hello world."</span>)
+    .font(show ? .largeTitle : .body)
+    .fontWeight(show ? .black : .thin)
+    .foregroundColor(show ? .yellow : .red)
+    .contentTransition(.interpolate)
+    .onTapGesture {
+        withAnimation(.easeInOut(duration: <span class="hljs-number">1</span>)) {
+            show.toggle()
+        }
+    }
+</code></pre><h2>.toolbar(.hidden, for: .navigationBar)</h2><pre data-language="swift" class="hljs"><code><span class="hljs-type">NavigationStack</span> {
+    <span class="hljs-type">Text</span>(<span class="hljs-string">"hello world."</span>)
+        .navigationTitle(<span class="hljs-string">"Title"</span>)
+        .toolbarBackground(<span class="hljs-type">Color</span>.yellow, <span class="hljs-keyword">for</span>: .navigationBar)
+        .toolbar(.hidden, <span class="hljs-keyword">for</span>: .navigationBar)
+}
+</code></pre><h2>MagnificationGesture</h2><pre data-language="swift" class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ContentView</span>: <span class="hljs-title">View</span> </span>{
+    @<span class="hljs-type">State</span> <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> magnification: <span class="hljs-type">CGFloat</span> = <span class="hljs-number">1.0</span>
+    
+    <span class="hljs-keyword">var</span> body: some <span class="hljs-type">View</span> {
+        <span class="hljs-keyword">let</span> magnificationGesture =
+        <span class="hljs-type">MagnificationGesture</span>(minimumScaleDelta: <span class="hljs-number">0</span>)
+            .onChanged({ value <span class="hljs-keyword">in</span>
+                <span class="hljs-keyword">self</span>.magnification = value
+            })
+            .onEnded({ <span class="hljs-number">_</span> <span class="hljs-keyword">in</span>
+                <span class="hljs-built_in">print</span>(<span class="hljs-string">"Gesture Ended"</span>)
+            })
+        
+        <span class="hljs-keyword">return</span> <span class="hljs-type">Image</span>(systemName: <span class="hljs-string">"hand.point.right.fill"</span>)
+            .resizable()
+            .font(.largeTitle)
+            .scaleEffect(magnification)
+            .gesture(magnificationGesture)
+            .frame(width: <span class="hljs-number">100</span>, height: <span class="hljs-number">90</span>)
+    }
+}
+</code></pre><pre data-language="swift" class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">MagnificationGestureView</span>: <span class="hljs-title">View</span> </span>{
+    @<span class="hljs-type">GestureState</span> <span class="hljs-keyword">var</span> magnifyBy = <span class="hljs-number">1.0</span>
+
+    <span class="hljs-keyword">var</span> magnification: some <span class="hljs-type">Gesture</span> {
+        <span class="hljs-type">MagnificationGesture</span>()
+            .updating($magnifyBy) { currentState, gestureState, transaction <span class="hljs-keyword">in</span>
+                gestureState = currentState
+            }
+    }
+
+    <span class="hljs-keyword">var</span> body: some <span class="hljs-type">View</span> {
+        <span class="hljs-type">Circle</span>()
+            .frame(width: <span class="hljs-number">100</span>, height: <span class="hljs-number">100</span>)
+            .scaleEffect(magnifyBy)
+            .gesture(magnification)
+    }
+}
+</code></pre><h2>transition</h2><pre data-language="swift" class="hljs"><code>.transition(.scale)
+.transition(.move(edge: .top))
+.transition(<span class="hljs-type">AnyTransition</span>.opacity.combined(with: .move(edge: .top)))
+.transition(.fadeAndMove)
+.transition(.asymmetric(insertion: .scale, removal: .slide))
+
+<span class="hljs-class"><span class="hljs-keyword">extension</span> <span class="hljs-title">AnyTransition</span> </span>{
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">var</span> fadeAndMove: <span class="hljs-type">AnyTransition</span> {
+        <span class="hljs-type">AnyTransition</span>.opacity.combined(with: .move(edge: .top))
+    }
+}
+</code></pre><h2>ToggleStyle</h2><pre data-language="swift" class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ContentView</span>: <span class="hljs-title">View</span> </span>{
+    @<span class="hljs-type">State</span> <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> active: <span class="hljs-type">Bool</span> = <span class="hljs-literal">false</span>
+    
+    <span class="hljs-keyword">var</span> body: some <span class="hljs-type">View</span> {
+        <span class="hljs-type">Toggle</span>(isOn: $active, label: {
+            <span class="hljs-type">Text</span>(<span class="hljs-string">"Active"</span>)
+        })
+        .toggleStyle(<span class="hljs-type">PowerToggleStyle</span>())
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">CheckmarkToggleStyle</span>: <span class="hljs-title">ToggleStyle</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">makeBody</span><span class="hljs-params">(configuration: Configuration)</span></span> -&gt; some <span class="hljs-type">View</span> {
+        <span class="hljs-type">HStack</span> {
+            configuration.label
+            <span class="hljs-type">Spacer</span>()
+            <span class="hljs-type">Rectangle</span>()
+                .foregroundColor(configuration.isOn ? .green : .gray)
+                .frame(width: <span class="hljs-number">51</span>, height: <span class="hljs-number">31</span>, alignment: .center)
+                .overlay(
+                    <span class="hljs-type">Circle</span>()
+                        .foregroundColor(.white)
+                        .padding(.all, <span class="hljs-number">3</span>)
+                        .overlay(
+                            <span class="hljs-type">Image</span>(systemName: configuration.isOn ? <span class="hljs-string">"checkmark"</span> : <span class="hljs-string">"xmark"</span>)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .font(<span class="hljs-type">Font</span>.title.weight(.black))
+                                .frame(width: <span class="hljs-number">8</span>, height: <span class="hljs-number">8</span>, alignment: .center)
+                                .foregroundColor(configuration.isOn ? .green : .gray)
+                        )
+                        .offset(x: configuration.isOn ? <span class="hljs-number">11</span> : -<span class="hljs-number">11</span>, y: <span class="hljs-number">0</span>)
+                        .animation(<span class="hljs-type">Animation</span>.linear(duration: <span class="hljs-number">0.1</span>), value: configuration.isOn)
+                    
+                ).cornerRadius(<span class="hljs-number">20</span>)
+                .onTapGesture { configuration.isOn.toggle() }
+        }
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">PowerToggleStyle</span>: <span class="hljs-title">ToggleStyle</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">makeBody</span><span class="hljs-params">(configuration: Configuration)</span></span> -&gt; some <span class="hljs-type">View</span> {
+        <span class="hljs-type">HStack</span> {
+            configuration.label
+            <span class="hljs-type">Spacer</span>()
+            <span class="hljs-type">Rectangle</span>()
+                .foregroundColor(configuration.isOn ? .green : .gray)
+                .frame(width: <span class="hljs-number">51</span>, height: <span class="hljs-number">31</span>, alignment: .center)
+                .overlay(
+                    <span class="hljs-type">Circle</span>()
+                        .foregroundColor(.white)
+                        .padding(.all, <span class="hljs-number">3</span>)
+                        .overlay(
+                            <span class="hljs-type">GeometryReader</span> { geo <span class="hljs-keyword">in</span>
+                                <span class="hljs-type">Path</span> { p <span class="hljs-keyword">in</span>
+                                    <span class="hljs-keyword">if</span> !configuration.isOn {
+                                        p.addRoundedRect(<span class="hljs-keyword">in</span>: <span class="hljs-type">CGRect</span>(x: <span class="hljs-number">20</span>, y: <span class="hljs-number">10</span>, width: <span class="hljs-number">10.5</span>, height: <span class="hljs-number">10.5</span>), cornerSize: <span class="hljs-type">CGSize</span>(width: <span class="hljs-number">7.5</span>, height: <span class="hljs-number">7.5</span>), style: .circular, transform: .identity)
+                                    } <span class="hljs-keyword">else</span> {
+                                        p.move(to: <span class="hljs-type">CGPoint</span>(x: <span class="hljs-number">51</span>/<span class="hljs-number">2</span>, y: <span class="hljs-number">10</span>))
+                                        p.addLine(to: <span class="hljs-type">CGPoint</span>(x: <span class="hljs-number">51</span>/<span class="hljs-number">2</span>, y: <span class="hljs-number">31</span>-<span class="hljs-number">10</span>))
+                                    }
+                                }.stroke(configuration.isOn ? <span class="hljs-type">Color</span>.green : <span class="hljs-type">Color</span>.gray, lineWidth: <span class="hljs-number">2</span>)
+                            }
+                        )
+                        .offset(x: configuration.isOn ? <span class="hljs-number">11</span> : -<span class="hljs-number">11</span>, y: <span class="hljs-number">0</span>)
+                        .animation(<span class="hljs-type">Animation</span>.linear(duration: <span class="hljs-number">0.1</span>), value: configuration.isOn)
+                    
+                ).cornerRadius(<span class="hljs-number">20</span>)
+                .onTapGesture { configuration.isOn.toggle() }
+        }
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ImageToggleStyle</span>: <span class="hljs-title">ToggleStyle</span> </span>{
+    <span class="hljs-keyword">var</span> onImageName: <span class="hljs-type">String</span>
+    <span class="hljs-keyword">var</span> offImageName: <span class="hljs-type">String</span>
+    
+    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">makeBody</span><span class="hljs-params">(configuration: Configuration)</span></span> -&gt; some <span class="hljs-type">View</span> {
+        <span class="hljs-type">HStack</span> {
+            configuration.label
+            <span class="hljs-type">Spacer</span>()
+            <span class="hljs-type">Image</span>(configuration.isOn ? onImageName : offImageName)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: <span class="hljs-number">51</span>, height: <span class="hljs-number">31</span>, alignment: .center)
+                .overlay(
+                    <span class="hljs-type">Circle</span>()
+                        .foregroundColor(.white)
+                        .padding(.all, <span class="hljs-number">3</span>)
+                        .offset(x: configuration.isOn ? <span class="hljs-number">11</span> : -<span class="hljs-number">11</span>, y: <span class="hljs-number">0</span>)
+                        .animation(<span class="hljs-type">Animation</span>.linear(duration: <span class="hljs-number">0.1</span>), value: configuration.isOn)
+                ).cornerRadius(<span class="hljs-number">20</span>)
+                .onTapGesture { configuration.isOn.toggle() }
+        }
+    }
+}
+</code></pre><h2>ViewModifier</h2><pre data-language="swift" class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ContentView</span>: <span class="hljs-title">View</span> </span>{
+    <span class="hljs-keyword">var</span> body: some <span class="hljs-type">View</span> {
+        <span class="hljs-type">Text</span>(<span class="hljs-string">"Active"</span>)
+            .standardTitle()
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">StandardTitle</span>: <span class="hljs-title">ViewModifier</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">body</span><span class="hljs-params">(content: Content)</span></span> -&gt; some <span class="hljs-type">View</span> {
+        content
+            .font(.largeTitle)
+            .padding()
+            .border(<span class="hljs-type">Color</span>.gray, width: <span class="hljs-number">2</span>)
+            .background(<span class="hljs-type">Color</span>.white
+                .shadow(color: <span class="hljs-type">Color</span>.black, radius: <span class="hljs-number">5</span>, x: <span class="hljs-number">0</span>, y: <span class="hljs-number">5</span>))
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">extension</span> <span class="hljs-title">View</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">standardTitle</span><span class="hljs-params">()</span></span> -&gt; some <span class="hljs-type">View</span> {
+        <span class="hljs-keyword">self</span>.modifier(<span class="hljs-type">StandardTitle</span>())
+    }
+}
+</code></pre><h2>@ViewBuilder</h2><pre data-language="swift" class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">MyVStack</span>&lt;<span class="hljs-title">Content</span>: <span class="hljs-title">View</span>&gt;: <span class="hljs-title">View</span> </span>{
+    <span class="hljs-keyword">let</span> content: () -&gt; <span class="hljs-type">Content</span>
+    <span class="hljs-keyword">init</span>(@<span class="hljs-type">ViewBuilder</span> content: @escaping () -&gt; <span class="hljs-type">Content</span>) {
+        <span class="hljs-keyword">self</span>.content = content
+    }
+    
+    <span class="hljs-keyword">var</span> body: some <span class="hljs-type">View</span> {
+        <span class="hljs-type">VStack</span>(spacing: <span class="hljs-number">10</span>) {
+            content()
+        }
+        .font(.largeTitle)
+    }
+}
+</code></pre><h2>horizontalSizeClass</h2><pre data-language="swift" class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ContentView_testhorizontalSizeClass</span>: <span class="hljs-title">View</span> </span>{
+    @<span class="hljs-type">Environment</span>(\.horizontalSizeClass) <span class="hljs-keyword">var</span> horizontalSizeClass
+    
+    <span class="hljs-keyword">var</span> body: some <span class="hljs-type">View</span> {
+        <span class="hljs-keyword">if</span> horizontalSizeClass == .compact {
+            <span class="hljs-type">VStack</span> {
+                <span class="hljs-type">Text</span>(<span class="hljs-string">"竖屏"</span>)
+                <span class="hljs-type">Text</span>(<span class="hljs-string">"shu ping"</span>)
+            }
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-type">HStack</span> {
+                <span class="hljs-type">Text</span>(<span class="hljs-string">"横屏"</span>)
+                <span class="hljs-type">Text</span>(<span class="hljs-string">"heng ping"</span>)
+            }
+        }
+    }
+}
+</code></pre><h2>@AppStorage</h2><pre data-language="swift" class="hljs"><code><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">UserName</span>: <span class="hljs-title">Encodable</span>, <span class="hljs-title">Decodable</span> </span>{
+    <span class="hljs-keyword">var</span> firstName: <span class="hljs-type">String</span>
+    <span class="hljs-keyword">var</span> secondName: <span class="hljs-type">String</span>
+}
+
+<span class="hljs-keyword">var</span> username = <span class="hljs-type">UserName</span>(firstName: <span class="hljs-string">"Mark"</span>, secondName: <span class="hljs-string">"Wilson"</span>)
+
+@<span class="hljs-type">AppStorage</span>(<span class="hljs-string">"username"</span>) <span class="hljs-keyword">var</span> namestore: <span class="hljs-type">Data</span> = <span class="hljs-type">Data</span>()
+
+<span class="hljs-keyword">let</span> encoder = <span class="hljs-type">JSONEncoder</span>() 
+<span class="hljs-keyword">if</span> <span class="hljs-keyword">let</span> data = <span class="hljs-keyword">try</span>? encoder.encode(username) {
+    namestore = data
+}
+
+<span class="hljs-keyword">let</span> decoder = <span class="hljs-type">JSONDecoder</span>()
+<span class="hljs-keyword">if</span> <span class="hljs-keyword">let</span> name = <span class="hljs-keyword">try</span>? decoder.decode(<span class="hljs-type">UserName</span>.<span class="hljs-keyword">self</span>, from: namestore) {
+    username = name
+}
+</code></pre><pre data-language="swift" class="hljs"><code>@<span class="hljs-type">AppStorage</span>(<span class="hljs-string">"myimage"</span>) <span class="hljs-keyword">var</span> imagestore: <span class="hljs-type">Data</span> = <span class="hljs-type">Data</span>()
+ 
+<span class="hljs-keyword">var</span> image = <span class="hljs-type">UIImage</span>(named: <span class="hljs-string">"profilephoto"</span>)
+
+<span class="hljs-keyword">if</span> <span class="hljs-keyword">let</span> data = image!.pngData() {
+    imagestore = data
+}
+
+<span class="hljs-keyword">if</span> <span class="hljs-keyword">let</span> decodedImage: <span class="hljs-type">UIImage</span> = <span class="hljs-type">UIImage</span>(data: imagestore) {
+     image = decodedImage
+}
+</code></pre><h2>时间间隔</h2><pre data-language="swift" class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">minutesBetween</span><span class="hljs-params">(<span class="hljs-number">_</span> start: Date, and end: Date)</span></span> -&gt; <span class="hljs-type">Int</span> {
+    <span class="hljs-keyword">let</span> diff = <span class="hljs-type">Calendar</span>.current.dateComponents([.minute], from: start, to: end)
+    <span class="hljs-keyword">guard</span> <span class="hljs-keyword">let</span> minute = diff.minute <span class="hljs-keyword">else</span> { <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> }
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">abs</span>(minute)
+}
+</code></pre><h2>样式文本</h2><pre data-language="swift" class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">textWithHashtags</span><span class="hljs-params">(<span class="hljs-number">_</span> text: String, color: Color)</span></span> -&gt; <span class="hljs-type">Text</span> {
+    <span class="hljs-keyword">let</span> words = text.<span class="hljs-built_in">split</span>(separator: <span class="hljs-string">" "</span>)
+    <span class="hljs-keyword">var</span> output: <span class="hljs-type">Text</span> = <span class="hljs-type">Text</span>(<span class="hljs-string">""</span>)
+
+    <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> words {
+        <span class="hljs-keyword">if</span> word.hasPrefix(<span class="hljs-string">"#"</span>) { <span class="hljs-comment">// Pick out hash in words</span>
+            output = output + <span class="hljs-type">Text</span>(<span class="hljs-string">" "</span>) + <span class="hljs-type">Text</span>(<span class="hljs-type">String</span>(word))
+                .foregroundColor(color) <span class="hljs-comment">// Add custom styling here</span>
+        } <span class="hljs-keyword">else</span> {
+            output = output + <span class="hljs-type">Text</span>(<span class="hljs-string">" "</span>) + <span class="hljs-type">Text</span>(<span class="hljs-type">String</span>(word))
+        }
+    }
+    <span class="hljs-keyword">return</span> output
+}
+
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ContentView</span>: <span class="hljs-title">View</span> </span>{
+    <span class="hljs-keyword">var</span> body: some <span class="hljs-type">View</span> {
+        textWithHashtags(<span class="hljs-string">"Here's a quick and easy way to include #hashtag formatting in your #SwiftUI Text Views. Learn how in the #Tutorial here."</span>, color: .red)
+            .font(<span class="hljs-type">Font</span>.custom(<span class="hljs-string">"Avenir Next"</span>, size: <span class="hljs-number">20</span>))
+            .bold()
+            
+    }
+}
+</code></pre></div></div></article><div class="item-navigator"><table><tr><td class="previous-item"><a href="/posts/20220819-slipthing">跟风买了一个滑行垫</a></td><td></td></tr></table></div><footer><p>Copyright &copy; 程振宇 2022 </p><p>Generated using <a href="https://github.com/johnsundell/publish">Publish</a></p><ul><li><a href="https://github.com/chengzhenyu/">Github</a></li></ul></footer></div></body></html>
